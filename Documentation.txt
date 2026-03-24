@@ -1,0 +1,313 @@
+Name: Edwin Shaji Varghese
+Date: 06\11\2025
+
+Project Description:
+
+    The Address Book is a program to store and manage contact details such as name, phone number, and email. 
+    It allows users to add, search, edit, delete, and list contacts, with all data saved in a CSV file for future use. 
+    The program includes input validation, alphabetical sorting, and a simple menu-driven interface for easy navigation.
+
+Key Features:
+
+    # Add new contacts with input validation.
+    # Search contacts by Name, Phone Number, or Email ID.
+    # Edit or delete existing contacts.
+    # List all contacts in alphabetical order.
+    # Save and load contact data automatically using a CSV file.
+    # Handles multiple matches during search operations.
+    # Menu-driven interface with clear, formatted output.
+
+File Handling Functions
+
+---> saveContactsToFile()
+---> loadContactsFromFile()
+     Manage saving and loading of contacts in a CSV file, ensuring data is not lost between sessions.
+
+Display and Sorting Functions
+
+---> listContacts()
+     Used to display all contacts neatly and sort them alphabetically for easy viewing.
+
+Contact Functions
+
+---> createContact()
+     ask number of contact to create
+     read name, phone number and email address from user and validate at time of entering each parameter
+     save in structure Contact with respective createContact
+     increment contactCount value
+
+---> searchcontact()
+     seacrh contact by name ,phone number and email address and display contact details if found
+     if multiple contact found with same name identify with number or email 
+
+---> editcontact()
+     edit by name, phone number and email address
+     if contact found we can edit the contact 
+
+---> deletecontact()
+     delete by name, phone number and email address
+     if contact found in list , delete the contact and swap contact from next to previous index
+     decrement contact count by one
+
+Validation Functions
+
+---> valname()
+     validate the entered name contain upper/lower case alphabet and space
+---> valnum()
+     validate the entered number have 10 digits
+---> valmail()
+     validate the entered mail atleast have a lowercase alphabet and "@gmail.com" at end
+     and only allows lowercase alphabet, digits and '_' before "@gmail.com"
+
+Enter contact functions
+
+---> enter_name()
+     fun. to enter name from user
+---> enter_number()
+     fun. to enter phone number from user and check number is existing in contact list
+---> enter_email()
+     fun. to enter email address from user and check email is existing in contact list
+
+Search / Edit / Delete functions
+
+---> search_name()
+     search name and list contact(multiple) if found in the contact list 
+     if multiple contacts are there identify contact with number or email option will apppear
+     and if edit or delete feature is enabled it will support that option 
+---> search_number()
+     search number and list contact if found in the contact list
+     and if edit or delete feature is enabled it will support that option 
+---> search_mail()
+     search email and list contact if found in the contact list
+     and if edit or delete feature is enabled it will support that option
+
+Applications
+
+     # Used to store and organize contact details digitally instead of manually maintaining records.
+     # Helpful for personal and professional contact management.
+     # Can be used in small offices to maintain employee or client contact information.
+     # Serves as a foundation for advanced contact management systems or integration with mobile or web applications.
+     # Demonstrates core C programming concepts like structures, file handling, and modular coding for academic learning.
+
+Sample: 
+
+WELCOME TO ADDRESS BOOK
+
+ADDRESS BOOK MENU:
+1. Create contact
+2. Search contact
+3. Edit contact
+4. Delete contact
+5. List all contacts
+6. Save contacts
+7. Exit
+
+Enter your choice: 1
+Enter the number of contacts to add: 1
+
+CREATING CONTACT 28 
+
+Enter the name: Narendra Modi
+Enter 10-digits phone number: 2014192429
+Enter mail address: modi@gmail.com
+
+Entered contact details: 
+---> Name: Narendra Modi        Phone number: 2014192429        Email: modi@gmail.com
+
+CONTACT CREATED SUCCESSFULLY!
+
+ADDRESS BOOK MENU:
+1. Create contact
+2. Search contact
+3. Edit contact
+4. Delete contact
+5. List all contacts
+6. Save contacts
+7. Exit
+
+Enter your choice: 2
+
+Search by :
+1. Name
+2. Number
+3. Email
+4. Exit
+
+Enter your choice: 1
+
+Enter the name: Edwin
+
+Contact 1
+---> Name: Edwin          Phone Number: 1234567890     Email address: esv@gmail.com
+
+1 MATCHING CONTACTS FOUND WITH THE ENTERED NAME!
+
+Search by :
+1. Name
+2. Number
+3. Email
+4. Exit
+
+Enter your choice: 4
+
+EXIT FROM SEARCH CONTACT
+
+ADDRESS BOOK MENU:
+1. Create contact
+2. Search contact
+3. Edit contact
+4. Delete contact
+5. List all contacts
+6. Save contacts
+7. Exit
+
+Enter your choice: 3
+
+Edit by :
+1. Name
+2. Number
+3. Email
+4. Exit
+
+Enter your choice: 1
+
+Enter the name: Narendra Modi
+
+Contact 1
+---> Name: Narendra Modi  Phone Number: 2014192429     Email address: modi@gmail.com
+
+1 MATCHING CONTACTS FOUND WITH THE ENTERED NAME!
+
+New Name*
+Enter the name: NARENDRA MODI
+
+Updated contact details
+--> Name: NARENDRA MODI  Phone Number: 2014192429     Email address: modi@gmail.com
+
+NAME SUCCESSFULLY EDITED!
+
+Edit by :
+1. Name
+2. Number
+3. Email
+4. Exit
+
+Enter your choice: 4
+
+EXIT FROM EDIT CONTACT
+
+ADDRESS BOOK MENU:
+1. Create contact
+2. Search contact
+3. Edit contact
+4. Delete contact
+5. List all contacts
+6. Save contacts
+7. Exit
+
+Enter your choice: 4
+
+Delete by :
+1. Name
+2. Number
+3. Email
+4. Exit
+
+Enter your choice: 1
+
+Enter the name: NARENDRA MODI
+
+Contact 1
+---> Name: NARENDRA MODI  Phone Number: 2014192429     Email address: modi@gmail.com
+
+1 MATCHING CONTACTS FOUND WITH THE ENTERED NAME!
+
+CONTACT DELETED SUCCESSFULLY!
+
+Delete by :
+1. Name
+2. Number
+3. Email
+4. Exit
+
+Enter your choice: 4
+
+EXIT FROM DELETE CONTACT
+
+ADDRESS BOOK MENU:
+1. Create contact
+2. Search contact
+3. Edit contact
+4. Delete contact
+5. List all contacts
+6. Save contacts
+7. Exit
+
+Enter your choice: 5
+
+Sort by :
+1. Name
+2. Number
+3. Email
+
+Enter your choice: 1
+
+                            CONTACT LIST
+---------------------------------------------------------------------------
+SI.NO   NAME                PHONE NUMBER             EMAIL ADDRESS
+---------------------------------------------------------------------------
+   1)   AaAa aAaA            4567890000              aaaa@gmail.com
+   2)   Apollo Eleven        1969196969              apollo11@gmail.com
+   3)   area fifty one       1950195050              area51@gmail.com
+   4)   bbbbb                5678900000              bbbb@gmail.com
+   5)   Bhagat Singh         2222222222              singh@gmail.com
+   6)   cccccc               3456789000              cccc@gmail.com
+   7)   Cold War             1947199147              cold_war@gmail.com
+   8)   DdddD                2233446789              d@gmail.com
+   9)   eeVee                1234567899              eve@gmail.com
+  10)   Edwin                1234567890              esv@gmail.com
+  11)   Edwin Shaji          6282461567              edwin@gmail.com
+  12)   Einstein             1921192121              albert1879@gmail.com
+  13)   flame                1234567888              flame@gmail.com
+  14)   Gas                  1234567777              gas@gmail.com
+  15)   Galileo Galilei      1564164211              telescope@gmail.com
+  16)   Helen Keller         1880196814              helen@gmail.com
+  17)   hello world          8888888888              bye_world@gmail.com
+  18)   Hema Commity         9999999999              heam@gmail.com
+  19)   HITLER               1889194525              adolf@gmail.com
+  20)   Ian                  6768888676              ian@gmail.com
+  21)   Leonardo DaVinci     1452151908              davinci19@gmail.com
+  22)   moonwalk             1983198383              moonwalk83@gmail.com
+  23)   Nelson Mandela       1994191814              nelson2014@gmail.com
+  24)   Pablo PiCaSso        1881197316              picaso@gmail.com
+  25)   winston Churchil     1874196527              churchil@gmail.com
+  26)   Zeppelin Era         1900190000              airshipexplod@gmail.com
+  27)   Zoot Suit            1943194343              zootsuit@gmail.com
+---------------------------------------------------------------------------
+                          BACK TO MAIN MENU
+
+ADDRESS BOOK MENU:
+1. Create contact
+2. Search contact
+3. Edit contact
+4. Delete contact
+5. List all contacts
+6. Save contacts
+7. Exit
+
+Enter your choice: 6
+
+CONTACT SUCCESSFULLY COPIED TO CONTACT.CSV FILE!
+
+ADDRESS BOOK MENU:
+1. Create contact
+2. Search contact
+3. Edit contact
+4. Delete contact
+5. List all contacts
+6. Save contacts
+7. Exit
+
+Enter your choice: 7
+
+EXIT FROM ADDRESS BOOK
